@@ -1,0 +1,16 @@
+before_install:
+  - openssl aes-256-cbc -K $encrypted_de7d0bd3d58f_key -iv $encrypted_de7d0bd3d58f_iv
+    -in .travis/deploy-key.enc -out .travis/deploy-key -d
+  - eval "$(ssh-agent)"
+  - chmod 600 .travis/deploy-key
+  - ssh-add .travis/deploy-key
+
+install:
+  - npm install
+
+before_script:
+  - git remote set-url origin git@github.com:${TRAVIS_REPO_SLUG}.git
+  - git config --global user.email "modem@itu.dk"
+  - git config --global user.name "Modem"
+
+script: npm run deploy
