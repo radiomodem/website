@@ -78,12 +78,39 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("dist"))
 })
 
+gulp.task("meta", ["meta:clean"], function (done) {
+  var _ = require("lodash")
+    , async = require("async")
+    , humans = require("humans-generator")
+    , robots = require("robots-generator")
+
+  async.parallel([
+    function (next) {
+      humans(_.extend(require("./humans.json"), {
+        out: "dist/humans.txt"
+      , callback: next
+      }))
+    }
+  , function (next) {
+      robots(_.extend(require("./robots.json"), {
+        out: "dist/robots.txt"
+      , callback: next
+      }))
+    }
+  ], done)
+})
+
+gulp.task("meta:clean", function (done) {
+  del(["dist/humans.txt", "dist/robots.txt"], done)
+})
+
 gulp.task("build", [
   "css"
 , "js"
 , "img"
 , "html"
 , "copy"
+, "meta"
 ])
 
 gulp.task("default", ["build"])
