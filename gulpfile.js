@@ -115,6 +115,6 @@ gulp.task("deploy", ["deploy:clean", "build"], function () {
     }))
 })
 
-gulp.task("deploy:clean", function () {
+gulp.task("deploy:clean", function (done) {
   del([".tmp"], done)
 })
