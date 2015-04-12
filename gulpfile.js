@@ -46,9 +46,12 @@ gulp.task("html", ["html:clean"], function () {
     .pipe(gulpsmith()
       .use($$.markdown())
       .use($$.permalinks(":title"))
-      .use($$.templates({
+      .use($$.layouts({
         engine: "ejs"
       , directory: "tpl"
+      }))
+      .use($$.inPlace({
+        engine: "ejs"
       }))
     )
     .pipe($.minifyHtml())

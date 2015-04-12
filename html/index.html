@@ -1,7 +1,14 @@
 ---
 title: Home
-template: home.html
+layout: home.html
 permalink: false
+
+# Stream settings
+stream:
+  url: http://130.226.142.108:443
+  formats:
+    mp3: audio/mpeg
+    ogg: audio/ogg
 ---
 
 <main class="u-display-flex u-display-flex--column" role="main">
@@ -13,7 +20,11 @@ permalink: false
     </div>
 
     <div class="masthead-fill">
-      <audio data-streamer></audio>
+      <audio data-streamer autoplay>
+        <% for (var format in stream.formats) { %>
+        <source src="<%- stream.url %>/stream.<%- format %>" type="<%- stream.formats[format] %>">
+        <% } %>
+      </audio>
     </div>
   </header>
 </main>
