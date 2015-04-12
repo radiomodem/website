@@ -22,7 +22,10 @@ stream:
     <div class="masthead-fill">
       <audio data-streamer autoplay>
         <% for (var format in stream.formats) { %>
-        <source src="<%- stream.url %>/stream.<%- format %>" type="<%- stream.formats[format] %>">
+          <source
+            src="<%- stream.url %>/stream.<%- format %>"
+            type="<%- stream.formats[format] %>"
+          >
         <% } %>
       </audio>
     </div>
