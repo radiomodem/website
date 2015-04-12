@@ -112,6 +112,7 @@ gulp.task("deploy", ["deploy:clean", "build"], function () {
       remoteUrl: "git@github.com:radio-modem/radio-modem.github.io.git"
     , branch: "master"
     , cacheDir: ".tmp"
+    , force: true
     }))
 })
 
