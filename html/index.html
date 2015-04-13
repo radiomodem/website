@@ -12,8 +12,8 @@ stream:
 ---
 
 <main class="u-display-flex u-display-flex--column" role="main">
-  <header class="masthead u-flex" role="banner">
-    <div class="container u-text-center">
+  <header class="masthead u-flex u-text-center" role="banner">
+    <div class="container">
       <a href="/">
         <img alt="Modem" src="/img/logo.svg" width="200" height="200">
       </a>
@@ -28,6 +28,36 @@ stream:
           >
         <% } %>
       </audio>
+
+      <button class="button" type="button" data-slide-in-toggle="slide-in">
+        Join us for a chat!
+      </button>
     </div>
   </header>
 </main>
+
+<div class="slide-in slide-in--right" id="slide-in" data-slide-in>
+  <header class="slide-in-header" role="banner">
+    <h4>The Modem Chat</h4>
+    <button class="slide-in-close" type="button" data-slide-in-close>
+      <i class="ion-close"></i>
+    </button>
+  </header>
+
+  <section class="slide-in-content">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'radio-modem';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </section>
+</div>
