@@ -4,20 +4,6 @@ var gulp = require("gulp")
   , $ = require("gulp-load-plugins")()
   , del = require("del")
 
-gulp.task("css", ["css:clean"], function () {
-})
-
-gulp.task("css:clean", function (done) {
-  del(["dist/css"], done)
-})
-
-gulp.task("js", ["js:clean"], function () {
-})
-
-gulp.task("js:clean", function (done) {
-  del(["dist/js"], done)
-})
-
 gulp.task("img", ["img:clean"], function () {
   return gulp.src("img/**")
     .pipe($.plumber())
@@ -105,9 +91,7 @@ gulp.task("meta:clean", function (done) {
 })
 
 gulp.task("build", [
-  "css"
-, "js"
-, "img"
+  "img"
 , "html"
 , "copy"
 , "meta"
@@ -118,8 +102,6 @@ gulp.task("default", ["build"])
 gulp.task("watch", ["build"], function () {
   $.livereload.listen()
 
-  gulp.watch("css/**/*.css", ["css"])
-  gulp.watch("js/**/*.js", ["js"])
   gulp.watch([
     "tpl/**/*.html"
   , "html/**/*.{md,html}"
