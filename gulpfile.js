@@ -132,6 +132,9 @@ gulp.task("deploy", ["deploy:clean", "build"], function () {
     , cacheDir: ".tmp"
     , force: true
     }))
+    .pipe($.size({
+      title: "deploy"
+    }))
 })
 
 gulp.task("deploy:clean", function (done) {
