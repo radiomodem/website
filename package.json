@@ -6,6 +6,9 @@
     "build": "gulp build --silent",
     "deploy": "gulp deploy --silent"
   },
+  "xo": {
+    "space": true
+  },
   "devDependencies": {
     "async": "^0.9.0",
     "del": "^1.1.1",

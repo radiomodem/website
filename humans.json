@@ -10,6 +10,6 @@
   "site": {
     "Standards": "HTML5, CSS4, ES6, WAI-ARIA, WebAudio",
     "Components": "jQuery, Normalize.css, Ionicons, Require.js",
-    "Software": "vim, Node.js, gulp.js, Metalsmith"
+    "Software": "Atom, Node.js, gulp.js, Metalsmith"
   }
 }
