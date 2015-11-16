@@ -1,5 +1,7 @@
 # Modem: Website
 
+> The Modem website. Coming to your browser this year!
+
 [![Build Status](https://travis-ci.org/radio-modem/website.svg?branch=master)](https://travis-ci.org/radio-modem/website) [![Dependency Status](https://gemnasium.com/radio-modem/website.svg)](https://gemnasium.com/radio-modem/website)
 
 ---
