@@ -3,9 +3,9 @@ title: Home
 layout: home.html
 permalink: false
 
-# Stream settings
-stream:
-  url: https://stream.radiomodem.dk
+# Broadcast settings
+broadcast:
+  url: https://broadcast.radiomodem.dk
   formats:
     mp3: audio/mpeg
     ogg: audio/ogg
@@ -21,10 +21,10 @@ stream:
 
     <div class="masthead-fill">
       <audio data-streamer autoplay>
-        <% for (var format in stream.formats) { %>
+        <% for (var format in broadcast.formats) { %>
           <source
-            src="<%- stream.url %>/stream.<%- format %>"
-            type="<%- stream.formats[format] %>"
+            src="<%- broadcast.url %>/stream.<%- format %>"
+            type="<%- broadcast.formats[format] %>"
           >
         <% } %>
       </audio>
