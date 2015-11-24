@@ -20,7 +20,7 @@ broadcast:
     </div>
 
     <div class="masthead-fill">
-      <audio data-streamer autoplay>
+      <audio data-streamer autoplay crossorigin="anonymous">
         <% for (var format in broadcast.formats) { %>
           <source
             src="<%- broadcast.url %>/stream.<%- format %>"
