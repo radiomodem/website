@@ -1,6 +1,12 @@
+sudo: false
+
 language: node_js
 node_js:
-  - "5"
+  - stable
+
+cache:
+  directories:
+    - node_modules
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_de7d0bd3d58f_key -iv $encrypted_de7d0bd3d58f_iv

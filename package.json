@@ -2,37 +2,38 @@
   "name": "modem-website",
   "private": true,
   "scripts": {
-    "start": "gulp serve --silent",
-    "build": "gulp build --silent",
-    "deploy": "gulp deploy --silent"
-  },
-  "xo": {
-    "space": true
+    "start": "gulp serve",
+    "build": "gulp build",
+    "deploy": "gulp deploy"
   },
   "devDependencies": {
-    "async": "^0.9.0",
-    "del": "^1.1.1",
-    "ejs": "^2.3.1",
-    "gulp": "^3.8.11",
-    "gulp-changed": "^1.2.1",
-    "gulp-front-matter": "^1.2.2",
-    "gulp-gh-pages": "^0.5.0",
-    "gulp-imagemin": "^2.2.1",
-    "gulp-livereload": "^3.8.0",
-    "gulp-load-plugins": "^0.10.0",
-    "gulp-minify-html": "^1.0.1",
-    "gulp-plumber": "^1.0.0",
-    "gulp-size": "^1.2.1",
-    "gulp-webserver": "^0.9.0",
-    "gulpsmith": "^0.5.3",
-    "humans-generator": "^1.2.7",
+    "async": "^1.5.2",
+    "del": "^2.2.0",
+    "ejs": "^2.4.1",
+    "gulp": "^3.9.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-front-matter": "^1.3.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-size": "^2.0.0",
+    "gulp-webserver": "^0.9.1",
+    "gulpsmith": "^0.5.5",
+    "humans-generator": "^2.0.2",
     "load-metalsmith-plugins": "^0.1.1",
-    "lodash": "^3.5.0",
-    "metalsmith": "^1.3.0",
-    "metalsmith-in-place": "^1.0.1",
-    "metalsmith-layouts": "^1.0.0",
+    "lodash": "^4.0.1",
+    "metalsmith": "^2.1.0",
+    "metalsmith-in-place": "^1.3.3",
+    "metalsmith-layouts": "^1.4.4",
     "metalsmith-markdown": "^0.2.1",
-    "metalsmith-permalinks": "^0.4.0",
-    "robots-generator": "^1.2.8"
+    "metalsmith-permalinks": "^0.4.1",
+    "robots-generator": "^2.3.5"
+  },
+  "xo": {
+    "space": true,
+    "esnext": true
   }
 }
