@@ -67,7 +67,7 @@ gulp.task('copy', () => gulp.src([
   .pipe(gulp.dest('dist'))
 );
 
-gulp.task('meta', ['meta:clean'], done => async.parallel([
+gulp.task('meta', ['html', 'meta:clean'], done => async.parallel([
   next => {
     humans(require('./humans.json'), (err, content) => {
       if (err) {
