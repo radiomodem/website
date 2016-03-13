@@ -1,15 +1,10 @@
 {
-  "team": {
-    "Kasper Kronborg Isager": {
-      "Twitter": "@kasperisager",
-      "Email": "kasperisager@gmail.com",
-      "Site": "https://github.com/kasperisager",
-      "Location": "Copenhagen, Denmark"
-    }
-  },
-  "site": {
-    "Standards": "HTML5, CSS4, ES6, WAI-ARIA, WebAudio",
-    "Components": "jQuery, Normalize.css, Ionicons, Require.js",
-    "Software": "Atom, Node.js, gulp.js, Metalsmith"
-  }
+  "team": [
+    "Kasper Kronborg Isager <kasperisager@gmail.com> (github.com/kasperisager)"
+  ],
+  "site": [
+    "Standards: HTML5, CSS4, ES6, WAI-ARIA, WebAudio",
+    "Components: jQuery, Normalize.css, Ionicons, Require.js",
+    "Software: Atom, Node.js, gulp.js, Metalsmith"
+  ]
 }
