@@ -2,7 +2,7 @@
 
 > The Modem website. Coming to your browser this year!
 
-[![Build Status](https://travis-ci.org/radiomodem/website.svg?branch=master)](https://travis-ci.org/radiomodem/website) [![Dependency Status](https://gemnasium.com/radiomodem/website.svg)](https://gemnasium.com/radiomodem/website)
+[![Build Status](https://travis-ci.org/radiomodem/website.svg?branch=master)](https://travis-ci.org/radiomodem/website)
 
 ---
 
