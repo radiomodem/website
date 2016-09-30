@@ -119,7 +119,7 @@ gulp.task('serve', ['watch'], () => gulp.src('dist')
 gulp.task('deploy', ['deploy:clean', 'build'], () => gulp.src('dist/**/*')
   .pipe($.plumber())
   .pipe($.ghPages({
-    remoteUrl: 'git@github.com:radio-modem/radio-modem.github.io.git',
+    remoteUrl: 'git@github.com:radiomodem/radiomodem.github.io.git',
     branch: 'master',
     cacheDir: '.tmp',
     force: true
