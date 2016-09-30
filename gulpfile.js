@@ -12,7 +12,6 @@ const humans = require('humans-generator');
 const robots = require('robots-generator');
 
 gulp.task('img', ['img:clean'], () => gulp.src('img/**')
-  .pipe($.plumber())
   .pipe($.changed('dist/img'))
   .pipe($.imagemin({
     svgoPlugins: [
@@ -30,7 +29,6 @@ gulp.task('img', ['img:clean'], () => gulp.src('img/**')
 gulp.task('img:clean', () => del(['dist/img']));
 
 gulp.task('html', ['html:clean'], () => gulp.src('html/**/*.{md,html}')
-  .pipe($.plumber())
   .pipe($.frontMatter().on('data', file => {
     _.assign(file, file.frontMatter);
   }))
@@ -62,7 +60,6 @@ gulp.task('copy', () => gulp.src([
 ], {
   base: './'
 })
-  .pipe($.plumber())
   .pipe($.changed('dist'))
   .pipe(gulp.dest('dist'))
 );
@@ -109,7 +106,6 @@ gulp.task('watch', ['build'], () => {
 });
 
 gulp.task('serve', ['watch'], () => gulp.src('dist')
-  .pipe($.plumber())
   .pipe($.webserver({
     open: true,
     livereload: true
@@ -117,7 +113,6 @@ gulp.task('serve', ['watch'], () => gulp.src('dist')
 );
 
 gulp.task('deploy', ['deploy:clean', 'build'], () => gulp.src('dist/**/*')
-  .pipe($.plumber())
   .pipe($.ghPages({
     remoteUrl: 'git@github.com:radiomodem/radiomodem.github.io.git',
     branch: 'master',

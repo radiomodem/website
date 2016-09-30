@@ -18,7 +18,6 @@
     "gulp-imagemin": "^2.4.0",
     "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^1.2.0",
-    "gulp-plumber": "^1.0.1",
     "gulp-size": "^2.0.0",
     "gulp-webserver": "^0.9.1",
     "gulpsmith": "^0.5.5",
