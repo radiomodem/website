@@ -1,5 +1,7 @@
 ---
 title: Home
+description: >
+  Online radio by the students of the IT University of Copenhagen
 layout: home.html
 permalink: false
 
@@ -11,12 +13,13 @@ broadcast:
     ogg: audio/ogg
 ---
 
-<main class="u-display-flex u-display-flex--column" role="main">
-  <header class="masthead u-flex u-text-center" role="banner">
+<main class="u-display-flex u-display-flex--column">
+  <header class="masthead u-flex u-text-center">
     <div class="container">
-      <a href="/">
-        <img alt="Modem" src="/img/logo.svg" width="200" height="200">
-      </a>
+      <h1 class="u-flush">
+        <img alt="Modem logo" src="/img/logo.svg" width="200" height="200">
+        <span class="u-sr-only">Modem</span>
+      </h1>
     </div>
 
     <div class="masthead-fill">
@@ -36,15 +39,16 @@ broadcast:
   </header>
 </main>
 
-<div class="slide-in slide-in--right" id="slide-in" data-slide-in>
-  <header class="slide-in-header" role="banner">
+<aside class="slide-in slide-in--right" id="slide-in" data-slide-in>
+  <div class="slide-in-header">
     <h4>The Modem Chat</h4>
     <button class="slide-in-close" type="button" data-slide-in-close>
-      <i class="ion-close"></i>
+      <span class="ion-close" aria-hidden="true"></span>
+      <span class="u-sr-only">Close</span>
     </button>
-  </header>
+  </div>
 
-  <section class="slide-in-content">
+  <div class="slide-in-content">
     <div id="disqus_thread"></div>
     <script>
       var disqus_config = function () {
@@ -60,5 +64,5 @@ broadcast:
         (d.head || d.body).appendChild(s);
       })();
     </script>
-  </section>
-</div>
+  </div>
+</aside>
