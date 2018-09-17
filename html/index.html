@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Online radio by the students of the IT University of Copenhagen">
+
+    <title>Modem</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+
+    <link rel="stylesheet" href="https://patterns.radiomodem.dk/css/modem.css">
+
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body>
+
+
+<nav class="navbar navbar--inverse navbar-static-top">
+  <div class="container">
+    <div class="nav navbar-nav">
+      <a class="nav-link" href="/">Modem</a>
+    </div>
+
+    <div class="nav navbar-nav navbar-right">
+      <a class="nav-link" href="/about">About</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<main class="u-display-flex u-display-flex--column">
+  <header class="masthead u-flex u-text-center">
+    <div class="container">
+      <h1 class="u-flush">
+        <img alt="Modem logo" src="/img/logo.svg" width="200" height="200">
+        <span class="u-sr-only">Modem</span>
+      </h1>
+    </div>
+
+    <div class="masthead-fill">
+      <audio data-streamer autoplay crossorigin="anonymous">
+        
+          <source src="https://broadcast.radiomodem.dk/stream.mp3" type="audio/mpeg">
+        
+          <source src="https://broadcast.radiomodem.dk/stream.ogg" type="audio/ogg">
+        
+      </audio>
+
+      <button class="button" type="button" data-slide-in-toggle="slide-in">
+        Join us for a chat!
+      </button>
+    </div>
+  </header>
+</main>
+
+<aside class="slide-in slide-in--right" id="slide-in" data-slide-in>
+  <div class="slide-in-header">
+    <h4>The Modem Chat</h4>
+    <button class="slide-in-close" type="button" data-slide-in-close>
+      <span class="ion-close" aria-hidden="true"></span>
+      <span class="u-sr-only">Close</span>
+    </button>
+  </div>
+
+  <div class="slide-in-content">
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://radiomodem.dk';
+        this.page.identifier = 'chat';
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+
+        s.src = '//radiomodem.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+  </div>
+</aside>
+
+
+    <footer class="footer u-flush--top">
+      <div class="container">
+        <div class="row">
+          <div class="column u-compact">
+            <p><strong>Copyright &copy; 2018 Modem</strong></p>
+          </div>
+
+          <div class="column u-compact u-text-right">
+            <ul class="u-inline-list">
+              <li><a href="https://www.mixcloud.com/RadioModem" class="u-click-target">Podcasts</a></li>
+              <li><a href="https://www.facebook.com/RadioModem" class="u-click-target"><span class="ion-social-facebook" aria-hidden="true"></span><span class="u-sr-only">Facebook</span></a></li>
+              <li><a href="https://twitter.com/ModemITU" class="u-click-target"><span class="ion-social-twitter" aria-hidden="true"></span><span class="u-sr-only">Twitter</span></a></li>
+              <li><a href="https://www.instagram.com/radiomodem" class="u-click-target"><span class="ion-social-instagram" aria-hidden="true"></span><span class="u-sr-only">Instagram</span></a></li>
+              <li><a href="https://github.com/radiomodem" class="u-click-target"><span class="ion-social-github" aria-hidden="true"></span><span class="u-sr-only">GitHub</span></a></li>
+              <li>&middot;</li>
+              <li><a href="https://github.com/radiomodem">We <span class="ion-heart" style="color: #ff4136" aria-hidden="true"></span><span class="u-sr-only">Love</span> Open Source</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.5.2/holder.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script src="https://patterns.radiomodem.dk/js/modem.js"></script>
+
+    <script>require(["modem"])</script>
+  </body>
+</html>
